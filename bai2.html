@@ -10,37 +10,30 @@
 			<h2>SELECT DATALIST</h2>
 			<div class="content">
 				<div class="selectbox">
-					<input list="browsers" onchange="myfunction()" name="browser" id="browser" >
-					<datalist name="slected"   id="browsers" dir="" >
-						<option class="1" value="1"></option>
-						<option class="2" value="2"></option>
-						<option class="3" value="3"></option>
-						<option class="4" value="4"></option>
-						<option class="5" value="5"></option>
-						<option class="6" value="6"></option>
-						<option class="chan" value="chẵn"></option>
-						<option class="le"  value="lẻ"></option>
-						<option class="reset" value="reset"></option>
-					</datalist>
+					<select id="selectdl" onchange="myFunction()">
+						<option disabled selected></option>
+					    <option value="1">1</option>
+					    <option value="2">2</option>
+					    <option value="3">3</option> 
+					    <option value="4">4</option>
+					    <option value="5">5</option>
+					    <option value="6">6</option>
+					    <option value="chan">chẵn</option>
+					    <option value="le">lẻ</option>
+					    <option value="reset">reset</option>
+					</select>
 				</div>
 				<div class="output">
-					<ol class="ouputsl">
-						<li value="1">Hà Nội</li>
-						<li value="2">Sài Gòn</li>
-						<li value="3">Đà Nẵng</li>
-						<li value="4">Huế</li>
-						<li value="5">Hải Phòng</li>
-						<li value="6">Nha Trang</li>
+						<p >1.Hà Nội</p>
+						<p >2.Sài Gòn</p>
+						<p >3.Đà Nẵng</p>
+						<p >4.Huế</p>
+						<p >5.Hải Phòng</p>
+						<p >6.Nha Trang</p>
 					</ol>
 				</div>
 			</div>
 		</dir>
-	<script type="text/javascript">
-		function myfunction(){
-			var select = document.getElementById('browsers');
-			var value = select.options[select.selectedIndex].value;
-			console.log(value);
-		}
-	</script>
+	<script type="text/javascript" src="script2.js"></script>
 </body>
 </html>

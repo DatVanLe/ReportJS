@@ -14,10 +14,13 @@
 }
 #selectdl{
 	text-align: center;
-	padding: 8px;
+	padding: 8px 50px;
 }
 .output{
 	border: 1px solid black;
     padding: 20px;
     line-height: 25px;
+    width: 130px;
+    height: 304px;
 }
+
