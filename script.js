@@ -1,22 +1,18 @@
 document.onkeyup = function(event) {
 	const kbshift = 16;
 	const kbdel = 46;
-	if(event.keyCode == kbshift)
-	{
+	if (event.keyCode == kbshift) {
 		document.getElementById('addform').click();
 	}
-	if(event.keyCode == kbdel)
-	{
+	if (event.keyCode == kbdel) {
 		document.getElementById('resetform').click();
 	}
 }
 function inputPhone(input) {
-	if(input.value.length == 3)
-	{
+	if (input.value.length == 3) {
 		input.value = input.value + "-";
 	}
-	if(input.value.length == 7)
-	{
+	if (input.value.length == 7) {
 		input.value = input.value + "-";
 	}
 }
@@ -27,12 +23,10 @@ function upFunction(input) {
   	});
 }
 function inputBd(input) {
-	if(input.value.length == 2)
-	{
+	if (input.value.length == 2) {
 		input.value = input.value + "-";
 	}
-	if(input.value.length == 5)
-	{
+	if (input.value.length == 5) {
 		input.value = input.value + "-";
 	}
 }
@@ -49,26 +43,22 @@ function getValue(name) {
 }
 var err = [];
 function checkNull(name, value) {	
-	if(value == "")
-	{
+	if (value == "") {
 		err.push('Vui lòng nhập ' + name);
 	}
 }
 function checkLength(name, value, min , max) {
-	if((value > 0 && value < min) || value > max)
-	{
+	if ((value > 0 && value < min) || value > max) {
 		err.push('Vui lòng nhập ' + name + ' lớn hơn ' + min + ' nhỏ hơn ' + max + ' ký tự');
 	}
 }
 function checkRegx(name, value, pattern) {
-	if(value.match(pattern))
-	{
+	if (value.match(pattern)) {
 		err.push('Vui lòng kiểm tra ký tự đặc biệt + định dạng + qui ước của ' + name);
 	}
 }
 function checkFormat(name, value, format) {
-	if(value != "" && !value.match(format))
-	{
+	if (value != "" && !value.match(format)) {
 		err.push('Vui lòng kiểm tra định dạng của ' + name);
 	}
 }
@@ -77,19 +67,16 @@ function checkFormatDate(name, value) {
 	var year = d.getFullYear();
 	var lastDay = new Date(value.slice(6), value.slice(3,5), 0);
 	var date = lastDay.getDate();
-	if(value.slice(3,5) > 12 || value.slice(0,2) > date || value.slice(6) >= year)
-	{	
+	if (value.slice(3,5) > 12 || value.slice(0,2) > date || value.slice(6) >= year) {	
 		err.push('Xin vui lòng kiểm tra lại ngày tháng năm của ' + name);
 	}
 }
 function checkImg(name, value) {
-	if(value != "")
-	{
+	if (value != "") {
 		const Extension = value.substring(
         value.lastIndexOf('.') + 1).toLowerCase();
-		if(Extension == "png" || Extension == "bmp" || Extension == "jpg")
-		{	
-		}else{
+		if (Extension == "png" || Extension == "bmp" || Extension == "jpg") {	
+		} else {
 			err.push("Vui lòng chọn ảnh có đuôi .png .jpg .bmp " + name);
 		}
 	}
@@ -134,17 +121,15 @@ function funValiDate() {
 	//repassword
 	const repassword = getValue('repassword');
 	checkNull('Repassword', repassword);
-	if(repassword != "" && repassword != password)
-	{
+	if (repassword != "" && repassword != password) {
 		err.push('Chưa khớp với password');
 	}
-	//img
+	// //img
 	const img = getValue('files');
 	checkNull('IMG', img);
 	checkImg('Avartar', img);
 	//no err
-	if(err != "")
-	{	
+	if (err != "") {	
 		let txt = "<ul>";
 		for(let i in err)
 		{
@@ -153,9 +138,8 @@ function funValiDate() {
 		document.getElementById("err").innerHTML = txt;
 		txt += "</ul>";
 		event.preventDefault();
-	}
-	if(err == "")
-	{
+	} 
+	else {
 		document.getElementById("fullname").innerHTML = name;
 		document.getElementById("fullemail").innerHTML = email;
 		document.getElementById("fullphone").innerHTML = phone;
