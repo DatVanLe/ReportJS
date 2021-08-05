@@ -2,9 +2,9 @@ function myFunction() {
 	const x = document.getElementById("selectdl");
 	let i = x.selectedIndex;
   	var numb = x.options[i].value;
-  	check_number(numb);
+  	checkNumber(numb);
 }
-function check_number(numb){
+function checkNumber(numb) {
 	const li = document.getElementsByTagName("p");
 	const leng = li.length;
 	let i;
@@ -28,7 +28,7 @@ function check_number(numb){
   	if(numb == "le")
   	{	
   		for (i = 0; i < li.length; i++) {
-  			li[i].style.display ="none";
+  			li[i].style.display = "none";
 	 		if(i == 0 || i % 2 == 0)
 	 		{
 		   	 	li[i].style.display = "block";
