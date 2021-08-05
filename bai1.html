@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <title>Bài 1</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h2>USER</h2>
+		<form id="formsub" name="validate" class="form-horizontal">
+		    <div class="form-group">
+		      <label class="control-label col-sm-3" for="name">Full name:</label>
+		      <div class="col-sm-9">
+		        <input id="name" type="text" class="form-control col-sm-3"  placeholder="Enter Full name" name="name">
+		      </div>
+		    </div>
+		    <div class="form-group">
+		      <label class="control-label col-sm-3" for="email">Email:</label>
+		      <div class="col-sm-9">          
+		        <input id="email" type="email" class="form-control" placeholder="Enter Email" name="email">
+		      </div>
+		    </div>
+		    <div class="form-group">
+		      <label  class="control-label col-sm-3"  for="phone">Phone:</label>
+		      <div class="col-sm-9">
+		        <input id="phone" type="text" class="form-control col-sm-3" placeholder="Enter Phone" name="phone">
+		      </div>
+		    </div>
+		    <div class="form-group">
+		      <label class="control-label col-sm-3" for="bd" >Birthday:</label>
+		      <div class="col-sm-9">          
+		        <input id="birthday" type="text" class="form-control" placeholder="dd-mm-YYYY" name="bd">
+		      </div>
+		    </div>
+		    <div class="form-group">
+		      <label class="control-label col-sm-3" for="password">Password:</label>
+		      <div class="col-sm-9">
+		        <input id="password" type="password" class="form-control col-sm-3" name="password"  placeholder="Enter Password">
+		      </div>
+		    </div>
+		    <div class="form-group">
+		      <label class="control-label col-sm-3" for="repassword">Comfirm password:</label>
+		      <div class="col-sm-9">          
+		        <input id="repassword" type="password" class="form-control" placeholder="Enter Comfirm password" name="repassword">
+		      </div>
+		    </div>
+		    <div class="form-group">        
+		      <div class="col-sm-offset-1 col-sm-10">
+		        <div class="file">
+		           <label id ="label" for="files" class="textfile">Avatar upload</label>
+		           <img id="img" src="" style="width: 90px; height: 90px;border-radius: 50%;border: 1px solid black; display: none;">
+  					<input name="addfile" id="files" style="visibility:hidden; display: none" type="file">
+		        </div>
+		      </div>
+		    </div>
+		    <div id="err">
+		    </div>
+		    <div class="form-group">        
+		      <div class="col-sm-offset-1 col-sm-10">
+		        <button id="addform" class="add" type="submit" name="add"  class="btn btn-default" >Add</button>
+		        <button id="resetform" class="reset" type="reset" name="reset" class="btn btn-default">Reset</button>
+		      </div>
+		    </div>
+		</form>
+		<div class="show">
+			<div class="output">
+				<label>Full Name:</label>
+				<span id="fullname"></span>
+			</div>
+			<div class="output">
+				<label>Email:</label>
+				<span id="fullemail"></span>
+			</div>
+			<div class="output">
+				<label>Phone:</label>
+				<span id="fullphone"></span>
+			</div>
+			<div class="output">
+				<label>Birthday:</label>
+				<span id="fullbirthday"></span>
+			</div>
+			<div class="avatar">
+				<p id="avatar">Avatar Preview </p>
+				<img id="reimg" src="" style="width: 90px; height: 90px;border-radius: 50%;border: 1px solid black;display: none; ">
+			</div>
+		</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
