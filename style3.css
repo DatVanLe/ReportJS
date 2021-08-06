@@ -1,0 +1,65 @@
+.container{
+	width: 500px;
+	padding-top: 50px;
+	padding-bottom: 50px; 
+}
+.container h2{
+	text-align: center;
+}
+.add{
+	float: left;
+	padding: 10px 40px;
+}
+.reset{
+	float: right;
+	padding: 10px 40px;
+}
+.file{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+.textfile{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid black;
+	text-align: center;
+	height: 90px;
+	width: 90px;
+	border-radius: 50%;
+}
+.avatar{
+	width: 90px;
+    height: 90px;
+    float: right;
+    margin-top: -100px;
+}
+#avatar{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid black;
+	text-align: center;
+	height: 90px;
+	width: 90px;
+	border-radius: 50%;
+}
+.show{
+	overflow: auto;
+	border: 1px solid black;
+	padding: 25px;
+	margin-top: 60px;
+}
+.output{
+	float: left;
+	width: 300px;
+	line-height: 40px;
+}
+#err{
+	color: red;
+	font-size: 15px;
+}
+#err_text{
+	color: red !important;
+}
