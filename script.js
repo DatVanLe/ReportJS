@@ -43,7 +43,7 @@ $(document).ready(function() {
 		$("#label").text("Change Avartar");		   	    		    	    
 	});	
 	function checkNull(fieldName, value) {
-		const err_text = value.parent().find("span");
+		let err_text = value.parent().find("span");
 		if (value.val() == "") {
 			err_text.text("Vui Lòng Nhập " + fieldName);
 
@@ -55,7 +55,7 @@ $(document).ready(function() {
 		}	
 	}
 	function checkLength(fieldName, value, min , max) {
-		const err_text = value.parent().find("span");
+		let err_text = value.parent().find("span");
 		if (value.val() != "") {
 			if (value.val().length < min || value.val().length > max) {
 				err_text.text("Vui lòng nhập " + fieldName + " Lớn hơn " + min + " Nhỏ hơn " + max + " ký tự");
@@ -67,7 +67,7 @@ $(document).ready(function() {
 		return flag;
 	}
 	function checkRegx(fieldName, value, pattern) {
-		const err_text = value.parent().find("span");
+		let err_text = value.parent().find("span");
 		if (value.val() != "") {
 			if (value.val().match(pattern)) {
 				err_text.text('Vui lòng kiểm tra ký tự đặc biệt + định dạng + qui ước của ' + fieldName);
@@ -79,7 +79,7 @@ $(document).ready(function() {
 		return flag;
 	}
 	function checkFormat(fieldName, value, format) {
-		const err_text = value.parent().find("span");
+		let err_text = value.parent().find("span");
 		if (value.val() != "") {		
 			if (!value.val().match(format)) {
 				err_text.text('Vui lòng kiểm tra định dạng của ' + fieldName);
@@ -91,7 +91,7 @@ $(document).ready(function() {
 		return flag;
 	}
 	function checkFormatDate(filedName, value) {
-		const err_text = value.parent().find("span");
+		let err_text = value.parent().find("span");
 		if (value.val() != "") {
 			var d = new Date();
 			var year = d.getFullYear();
@@ -107,7 +107,7 @@ $(document).ready(function() {
 		return flag;
 	}
 	function checkImg(fieldName, value) {
-		const err_text = value.parent().find("span");
+		let err_text = value.parent().find("span");
 		if (value.val() != "") {	
 			const Extension = value.val().substring(
 	        value.val().lastIndexOf('.') + 1).toLowerCase();
