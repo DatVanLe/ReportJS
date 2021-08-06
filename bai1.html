@@ -17,36 +17,42 @@
 		      <label class="control-label col-sm-3" for="name">Full name:</label>
 		      <div class="col-sm-9">
 		        <input id="name" type="text" class="form-control col-sm-3"  placeholder="Enter Full name" name="name">
+		        <span id="err_text"></span>
 		      </div>
 		    </div>
 		    <div class="form-group">
 		      <label class="control-label col-sm-3" for="email">Email:</label>
 		      <div class="col-sm-9">          
 		        <input id="email" type="email" class="form-control" placeholder="Enter Email" name="email">
+		        <span id="err_text"></span>
 		      </div>
 		    </div>
 		    <div class="form-group">
 		      <label  class="control-label col-sm-3"  for="phone">Phone:</label>
 		      <div class="col-sm-9">
 		        <input id="phone" type="text" class="form-control col-sm-3" placeholder="Enter Phone" name="phone">
+		        <span id="err_text"></span>
 		      </div>
 		    </div>
 		    <div class="form-group">
 		      <label class="control-label col-sm-3" for="bd" >Birthday:</label>
 		      <div class="col-sm-9">          
 		        <input id="birthday" type="text" class="form-control" placeholder="dd-mm-YYYY" name="bd">
+		        <span id="err_text"></span>
 		      </div>
 		    </div>
 		    <div class="form-group">
 		      <label class="control-label col-sm-3" for="password">Password:</label>
 		      <div class="col-sm-9">
 		        <input id="password" type="password" class="form-control col-sm-3" name="password"  placeholder="Enter Password">
+		        <span id="err_text"></span>
 		      </div>
 		    </div>
 		    <div class="form-group">
 		      <label class="control-label col-sm-3" for="repassword">Comfirm password:</label>
 		      <div class="col-sm-9">          
 		        <input id="repassword" type="password" class="form-control" placeholder="Enter Comfirm password" name="repassword">
+		        <span id="err_text"></span>
 		      </div>
 		    </div>
 		    <div class="form-group">        
@@ -55,6 +61,7 @@
 		           <label id ="label" for="files" class="textfile">Avatar upload</label>
 		           <img id="img" src="" style="width: 90px; height: 90px;border-radius: 50%;border: 1px solid black; display: none;">
   					<input name="addfile" id="files" style="visibility:hidden; display: none" type="file">
+  					<span id="err_text"></span>
 		        </div>
 		      </div>
 		    </div>

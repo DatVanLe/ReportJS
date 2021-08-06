@@ -60,3 +60,6 @@
 	color: red;
 	font-size: 15px;
 }
+#err_text{
+	color: red !important;
+}
