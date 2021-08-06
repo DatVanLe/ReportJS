@@ -1,42 +1,36 @@
 function myFunction() {
 	const x = document.getElementById("selectdl");
 	let i = x.selectedIndex;
-  	var numb = x.options[i].value;
-  	checkNumber(numb);
+  	let numB = x.options[i].value;
+  	checknumBer(numB);
 }
-function checkNumber(numb) {
+function checknumBer(numB) {
 	const li = document.getElementsByTagName("p");
 	const leng = li.length;
 	let i;
- 	if(isNaN(numb) == false)
- 	{	
+ 	if (isNaN(numB) == false) {	
 	 	for (i = 0; i < leng; i++) {
 	 		li[i].style.display="none";
-	   	 	li[numb-1].style.display = "block";
+	   	 	li[numB-1].style.display = "block";
 	  	}	
   	}
-  	if(numb == "chan")
-  	{	
+  	if (numB == "chan") {	
   		for (i = 0; i < leng; i++) {
   			li[i].style.display ="none";
-	 		if(i % 2 != 0)
-	 		{
+	 		if(i % 2 != 0) {
 		   	 	li[i].style.display = "block";
 	   	 	}
 	  	}
   	}
-  	if(numb == "le")
-  	{	
+  	if (numB == "le") {	
   		for (i = 0; i < li.length; i++) {
   			li[i].style.display = "none";
-	 		if(i == 0 || i % 2 == 0)
-	 		{
+	 		if(i == 0 || i % 2 == 0) {
 		   	 	li[i].style.display = "block";
 	   	 	}
 	  	}
   	}
-  	if(numb == "reset")
-  	{
+  	if (numB == "reset") {
   		for (i = 0; i < li.length; i++) {
   			li[i].style.display ="none";	
 	  	}
